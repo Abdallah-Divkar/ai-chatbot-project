@@ -1,0 +1,43 @@
+
+  container: {
+    maxWidth: "800px",
+    margin: "0 auto",
+    padding: "20px",
+    fontFamily: "Arial",
+  },
+
+  chatBox: {
+    height: "500px",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    padding: "10px",
+    overflowY: "auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    marginBottom: "20px",
+  },
+
+  message: {
+    padding: "12px",
+    borderRadius: "10px",
+    color: "white",
+    maxWidth: "70%",
+  },
+
+  inputArea: {
+    display: "flex",
+    gap: "10px",
+  },
+
+  input: {
+    flex: 1,
+    padding: "12px",
+    fontSize: "16px",
+  },
+
+  button: {
+    padding: "12px 20px",
+    cursor: "pointer",
+  },
+
