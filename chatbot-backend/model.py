@@ -3,8 +3,10 @@ import torch
 
 class ChatModel:
     def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
-        self.model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
+        self.tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
+        self.model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
+
+        self.chat_history_ids = None
 
     def get_response(self, user_input):
         new_input_ids = self.tokenizer.encode(
@@ -12,17 +14,19 @@ class ChatModel:
             return_tensors="pt"
         )
 
-        bot_output = self.model.generate(
-            new_input_ids,
-            max_length=200,
-            pad_token_id=self.tokenizer.eos_token_id,
-            do_sample=True,
-            top_k=50,
-            top_p=0.95
+        if self.chat_history_ids is not None:
+            bot_input_ids = torch.cat([self.chat_history_ids, new_input_ids], dim=-1)
+        else:
+            bot_input_ids = new_input_ids
+
+        self.chat_history_ids = self.model.generate(
+            bot_input_ids,
+            max_length=1000,
+            pad_token_id=self.tokenizer.eos_token_id
         )
 
         response = self.tokenizer.decode(
-            bot_output[:, new_input_ids.shape[-1]:][0],
+            self.chat_history_ids[:, bot_input_ids.shape[-1]:][0],
             skip_special_tokens=True
         )
 
