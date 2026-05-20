@@ -17,7 +17,13 @@ class ChatModel:
             json=payload
         )
 
-        result = response.json()
+        if response.status_code != 200:
+            return "Model error"
+
+        try:
+            result = response.json()
+        except:
+            return "Invalid model response"
 
         try:
             return result[0]["generated_text"]
