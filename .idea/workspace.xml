@@ -4,11 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec3b2409-8339-4537-959a-ba555d466be6" name="Changes" comment="" />
+    <list default="true" id="ec3b2409-8339-4537-959a-ba555d466be6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/chatbot-backend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-backend/memory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-backend/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-backend/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-backend/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +45,11 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\04.Projects\ai-chatbot-project" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ai-chatbot-project" />
@@ -70,5 +91,16 @@
       <updated>1779226220549</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chatbot-backend/app.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
